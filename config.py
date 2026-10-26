@@ -1,4 +1,3 @@
-# config.py
 MODEL_NAME = "large-v3-turbo"
 DEVICE = "cuda"
 COMPUTE_TYPE = "int8_float16"
@@ -14,7 +13,7 @@ C = {
     "surface_alt":    ("#F0F2F6", "#23202E"),
     "surface_hover":  ("#E2E6ED", "#302C3E"),
     "border":         ("#D1D5DB", "#302C3E"),
-    "text":           ("#000000", "#FFFFFF"), # <-- ZMIENIONO NA CZYSTĄ CZERŃ I BIEL
+    "text":           ("#000000", "#FFFFFF"),
     "muted":          ("#6B7280", "#9CA3AF"),
     "primary":        ("#6366F1", "#8B5CF6"),
     "primary_hover":  ("#4F46E5", "#7C3AED"),

@@ -1,7 +1,6 @@
-# main.py
 import os
-os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1" # Ukrywa ostrzeżenie o linkach
-os.environ["HF_HUB_OFFLINE"] = "0" # Zostaw 0, żeby mógł pobrać, jeśli nie ma
+os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
+os.environ["HF_HUB_OFFLINE"] = "0"
 
 import sys
 from pathlib import Path
@@ -34,7 +33,6 @@ is_running = False
 
 # --- INICJALIZACJA OKNA ---
 root = ctk.CTk()
-# ZMIENIONO NAZWĘ OKNA
 root.title("WHISPERER_V1")
 
 def resource_path(relative_path):
@@ -81,7 +79,6 @@ def update_theme():
     files_section.apply_theme()
     progress_section.apply_theme()
     
-    # Nagłówek (bez napisów i ikon, sama ramka)
     header.configure(fg_color="transparent")
 
 def toggle_theme():
@@ -170,7 +167,6 @@ def process_events():
 
 # --- BUDOWA INTERFEJSU ---
 
-# Nagłówek - teraz zawiera tylko przycisk motywu po prawej
 header = ctk.CTkFrame(main_frame, fg_color="transparent")
 header.pack(fill="x", pady=(0, 10))
 

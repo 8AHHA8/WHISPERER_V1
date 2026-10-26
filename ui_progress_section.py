@@ -1,4 +1,3 @@
-# ui_progress_section.py
 import customtkinter as ctk
 import tkinter as tk
 from theme_manager import theme

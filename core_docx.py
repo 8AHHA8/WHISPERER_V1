@@ -1,4 +1,3 @@
-# core_docx.py
 import os
 from docx import Document
 from docx.shared import Pt

@@ -1,4 +1,3 @@
-# core_audio.py
 import os
 import time
 import tempfile
@@ -68,7 +67,7 @@ def transcribe_file(model, audio_path, index, total, destination, events):
             no_repeat_ngram_size=3,      
             hallucination_silence_threshold=1.0, 
             compression_ratio_threshold=2.4,
-            suppress_tokens=[-1],        # To jest kluczowe dla blokowania obcych języków!
+            suppress_tokens=[-1],
         )
         duration = info.duration or 0
         next_minute = 1

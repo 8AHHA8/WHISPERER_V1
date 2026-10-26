@@ -1,4 +1,3 @@
-# ui_files_section.py
 import customtkinter as ctk
 import tkinter as tk
 from theme_manager import theme
@@ -33,7 +32,6 @@ class FilesSection:
         )
         self.entry_url.pack(side="left", padx=(10, 5))
         
-        # Zdarzenia dla pola URL
         self.entry_url.bind("<FocusIn>", self._on_entry_focus_in)
         self.entry_url.bind("<FocusOut>", self._on_entry_focus_out)
         self.entry_url.bind("<Enter>", self._on_entry_hover_in)   
@@ -63,14 +61,11 @@ class FilesSection:
             self.entry_url.configure(text_color=theme.color("muted"))
 
     def _on_entry_hover_in(self, event):
-        # Podświetlenie TŁA pola (używamy koloru "border" jako jaśniejszego tła)
         self.entry_url.configure(fg_color=theme.color("border"))
 
     def _on_entry_hover_out(self, event):
-        # Powrót do domyślnego tła (używamy koloru "surface_alt")
         self.entry_url.configure(fg_color=theme.color("surface_alt"))
 
-    # ------------------------------------------
 
     def refresh_list(self):
         for row in self.file_rows:

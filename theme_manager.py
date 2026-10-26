@@ -1,4 +1,3 @@
-# theme_manager.py
 import customtkinter as ctk
 from config import C
 
