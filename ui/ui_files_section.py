@@ -1,6 +1,6 @@
 import customtkinter as ctk
 import tkinter as tk
-from theme_manager import theme
+from ui.theme_manager import theme
 
 class FilesSection:
     def __init__(self, parent):
@@ -47,8 +47,6 @@ class FilesSection:
         self.list_frame.pack(fill="x", expand=False, padx=12, pady=(0, 12))
         
         return card
-
-    # --- OBSŁUGA HOVER I FOCUS DLA POLA URL ---
 
     def _on_entry_focus_in(self, event):
         if self.url_var.get() == "Paste YouTube link...":
@@ -101,7 +99,6 @@ class FilesSection:
         self.card.configure(fg_color=theme.color("surface"), border_color=theme.color("border"))
         self.btn_choose.configure(fg_color=theme.color("primary"), hover_color=theme.color("primary_hover"))
         
-        # Ustawiamy domyślne tło dla pola URL
         self.entry_url.configure(fg_color=theme.color("surface_alt"), border_color=theme.color("border"))
         
         if self.url_var.get() == "Paste YouTube link...":

@@ -1,6 +1,6 @@
 import customtkinter as ctk
 import tkinter as tk
-from theme_manager import theme
+from ui.theme_manager import theme
 
 class ProgressSection:
     def __init__(self, parent):

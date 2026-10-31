@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from config import C
+from assets.config import C
 
 class ThemeManager:
     def __init__(self):

@@ -1,0 +1,5 @@
+customtkinter
+faster-whisper
+yt-dlp
+python-docx
+av<19

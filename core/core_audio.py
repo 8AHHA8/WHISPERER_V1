@@ -6,8 +6,8 @@ from docx.shared import Pt
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 from faster_whisper import WhisperModel
-from config import MODEL_NAME, DEVICE, COMPUTE_TYPE
-from core_docx import make_docx, save_docx_safely
+from assets.config import MODEL_NAME, DEVICE, COMPUTE_TYPE
+from core.core_docx import make_docx, save_docx_safely
 
 def download_youtube_audio(url):
     temp_dir = tempfile.gettempdir()
