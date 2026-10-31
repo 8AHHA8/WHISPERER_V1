@@ -5,7 +5,6 @@ os.environ["HF_HUB_OFFLINE"] = "0"
 import sys
 from pathlib import Path
 
-# Dodaje foldery NVIDIA do ścieżki wyszukiwania DLL
 nvidia_path = Path(sys.prefix) / "Lib" / "site-packages" / "nvidia"
 if nvidia_path.exists():
     for folder in nvidia_path.iterdir():
@@ -13,7 +12,7 @@ if nvidia_path.exists():
             os.add_dll_directory(str(folder / "bin"))
             os.environ["PATH"] = str(folder / "bin") + os.pathsep + os.environ["PATH"]
 
-from assets.config import AUDIO_TYPES  # <- USUŃ TO (jeśli tu było)
+import customtkinter as ctk
 from ui.theme_manager import theme
 from ui.ui_files_section import FilesSection
 from ui.ui_progress_section import ProgressSection
@@ -37,7 +36,9 @@ window_height = 1000
 root.update_idletasks()
 screen_w, screen_h = root.winfo_screenwidth(), root.winfo_screenheight()
 window_width, window_height = min(window_width, screen_w - 40), min(window_height, screen_h - 60)
+
 x, y = max(0, (screen_w - window_width) // 2), max(0, (screen_h - window_height) // 2 - 15)
+
 root.geometry(f"{window_width}x{window_height}+{x}+{y}")
 root.minsize(580, 650)
 
