@@ -156,21 +156,29 @@ The general workflow is:
 
 ## Project Structure
 
-The repository currently uses the following structure:
+The project is organized into the following directories and files:
 
 ```text
-WHISPERER_V1/
+WHISPERER/
 ├── .vscode/
+│   └── settings.json
+├── app/
+│   └── logic.py
+├── assets/
+│   ├── config.py
+│   └── purple_pen.ico
+├── core/
+│   ├── core_audio.py
+│   └── core_docx.py
+├── ui/
+│   ├── theme_manager.py
+│   ├── ui_files_section.py
+│   └── ui_progress_section.py
 ├── .gitignore
-├── WHISPERER.spec
-├── config.py
-├── core_audio.py
-├── core_docx.py
 ├── main.py
-├── purple_pen.ico
-├── theme_manager.py
-├── ui_files_section.py
-└── ui_progress_section.py
+├── README.md
+├── requirements.txt
+└── WHISPERER.spec
 ```
 
 ## Output Format
